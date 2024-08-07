@@ -5,7 +5,7 @@ function Sidebar() {
   return (
   <>
  
-    {sidebar && <div className=' w-60 pr-10  text-center'>
+    {sidebar && <div className=' w-60 pr-10  text-center '>
         <div className=' border-b-2 border-b-gray-300 pt-10 '>
         <ul className='text-left ml-2 mt-2'>
                 <li>Home</li>

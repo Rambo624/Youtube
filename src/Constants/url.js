@@ -11,3 +11,5 @@ export const YOUTUBE_API=` https://youtube.googleapis.com/youtube/v3/videos?part
 export const VIDEO_API= `https://youtube.googleapis.com/youtube/v3/videos?part=snippet%2CcontentDetails%2Cstatistics&key=${GOOGLE_API} `
 
 export const SEARCH_API= `http://suggestqueries.google.com/complete/search?client=firefox&ds=yt&`
+
+export const RESULTS_API=`https://www.googleapis.com/youtube/v3/search?part=snippet&type=video&q=deadpool&maxResults=10&key=${GOOGLE_API}`

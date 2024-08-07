@@ -43,12 +43,10 @@ dispatch(cacheSearch({[searchQuery]:json[1]}))
 
   }, [searchQuery])
 
-  function search() {
-
-  }
+ 
 
   return (
-    <div className="grid grid-flow-col shadow-lg">
+    <div className="grid  grid-flow-col shadow-lg">
       <div className='flex col-span-1'>
         <img onClick={toggleSidebarMenu} className='w-10 cursor-pointer' src="https://www.svgrepo.com/show/312300/hamburger-menu.svg" alt="" />
         <a href="/"><img className='w-24 ml-4 mt-4' src={YOUTUBE_LOGO} alt="" /></a>
@@ -62,7 +60,7 @@ dispatch(cacheSearch({[searchQuery]:json[1]}))
         {showSuggestions && (
           <div className='absolute'>
             <ul className='bg-white ml-8 border border-gray-200 p-2 rounded-lg -mt-4 w-[30rem] shadow-2xl font-semibold'>
-              {Suggestions.map((s, index) => <li key={index} onClick={search} className=' hover:bg-gray-200 cursor-default'>{s}</li>)}
+              {Suggestions.map((s, index) => <li key={index}  className=' hover:bg-gray-200 cursor-default'><Link to={"/results"}>{s}</Link></li>)}
 
 
 
