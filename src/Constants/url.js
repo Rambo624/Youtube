@@ -7,10 +7,10 @@ export const BELL_ICON="https://th.bing.com/th/id/R.8177caf5c06a5bd45655d9a2853a
 
 const GOOGLE_API="AIzaSyBsAeq32swh_CysyiXP9WDpDeyivEtbQcM"
 
-export const YOUTUBE_API=` https://youtube.googleapis.com/youtube/v3/videos?part=snippet%2CcontentDetails%2Cstatistics&chart=mostPopular&regionCode=IN&maxResults=50&key=${GOOGLE_API}`
+export const YOUTUBE_API=` https://youtube.googleapis.com/youtube/v3/videos?part=snippet%2CcontentDetails%2Cstatistics&chart=mostPopular&regionCode=IN&maxResults=50&key=${import.meta.env.VITE_GOOGLE_API}`
 
-export const VIDEO_API= `https://youtube.googleapis.com/youtube/v3/videos?part=snippet%2CcontentDetails%2Cstatistics&key=${GOOGLE_API} `
+export const VIDEO_API= `https://youtube.googleapis.com/youtube/v3/videos?part=snippet%2CcontentDetails%2Cstatistics&key=${import.meta.env.VITE_GOOGLE_API} `
 
 export const SEARCH_API= `http://suggestqueries.google.com/complete/search?client=firefox&ds=yt&`
 
-export const RESULTS_API=`https://youtube.googleapis.com/youtube/v3/search?part=snippet&maxResults=25&q=surfing&key=${GOOGLE_API}`
+export const RESULTS_API=`https://youtube.googleapis.com/youtube/v3/search?part=snippet&maxResults=25&q=surfing&key=${import.meta.env.VITE_GOOGLE_API}`
