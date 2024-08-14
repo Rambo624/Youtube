@@ -11,6 +11,6 @@ export const YOUTUBE_API=` https://youtube.googleapis.com/youtube/v3/videos?part
 
 export const VIDEO_API= `https://youtube.googleapis.com/youtube/v3/videos?part=snippet%2CcontentDetails%2Cstatistics&key=${import.meta.env.VITE_GOOGLE_API} `
 
-export const SEARCH_API= `http://suggestqueries.google.com/complete/search?client=firefox&ds=yt&`
+export const SEARCH_API= `https://suggestqueries.google.com/complete/search?client=firefox&ds=yt&`
 
 export const RESULTS_API=`https://youtube.googleapis.com/youtube/v3/search?part=snippet&maxResults=25&q=surfing&key=${import.meta.env.VITE_GOOGLE_API}`
