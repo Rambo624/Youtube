@@ -34,10 +34,8 @@ element:<MainContainer/>,
   return (
     <Provider store={appStore}>
   <div >
-    <Header/>
-   <RouterProvider router={appRouter}> 
-    
-   </RouterProvider>
+      <Header/>
+   <RouterProvider router={appRouter}></RouterProvider>
     </div>
     </Provider>
   

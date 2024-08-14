@@ -3,10 +3,11 @@ import { YOUTUBE_LOGO, MICROPHONE_ICON, BELL_ICON, SEARCH_API } from '../Constan
 import { useDispatch, useSelector } from 'react-redux'
 import { toggleSidebar } from '../Constants/appSlice'
 import { useState, useEffect } from 'react'
-import { useRef } from 'react'
+
 import { cacheSearch } from '../Constants/SearchSlice'
-import { json, Link } from 'react-router-dom'
+
 function Header() {
+ 
   const dispatch = useDispatch()
 const searchCache=useSelector((store)=>store.search)
   const [searchQuery, setsearchQuery] = useState("")
@@ -14,7 +15,7 @@ const searchCache=useSelector((store)=>store.search)
   const [Suggestions, setSuggestions] = useState([])
 
 
-  console.log(searchQuery)
+ 
   function toggleSidebarMenu() {
     dispatch(toggleSidebar())
   }
@@ -23,7 +24,7 @@ const searchCache=useSelector((store)=>store.search)
   async function getSearchSuggestions() {
     const data = await fetch(`${SEARCH_API}q=${searchQuery}`)
     const json = await data.json()
-    console.log(json)
+    
     setSuggestions(json[1])
 dispatch(cacheSearch({[searchQuery]:json[1]}))
     
@@ -43,7 +44,9 @@ dispatch(cacheSearch({[searchQuery]:json[1]}))
 
   }, [searchQuery])
 
- 
+ function search(){
+
+ }
 
   return (
     <div className="grid  grid-flow-col shadow-lg">
@@ -60,7 +63,7 @@ dispatch(cacheSearch({[searchQuery]:json[1]}))
         {showSuggestions && (
           <div className='absolute'>
             <ul className='bg-white ml-8 border border-gray-200 p-2 rounded-lg -mt-4 w-[30rem] shadow-2xl font-semibold'>
-              {Suggestions.map((s, index) => <li key={index}  className=' hover:bg-gray-200 cursor-default'><Link to={"/results"}>{s}</Link></li>)}
+              {Suggestions.map((s, index) => <li key={index}  className=' hover:bg-gray-200 cursor-default'><a href="/results">{s}</a></li>)}
 
 
 
